@@ -6,7 +6,8 @@
 				_default = {
 					resizeOrientation: 'all',
 					aspectRatioLocked: true,
-					callback: function(){}
+					callback: function(){},
+					dragCallback: function(){}
 				},
 				resizeW = function(elm, left){
 					var nw = elm.width() + ( left - elm.width() + 5);
@@ -23,7 +24,7 @@
 				case 'h': $elm.append('<span class="rszH"></span>'); break;
 				case 'all': $elm.append('<span class="rszW"></span><span class="rszH"></span>'); break;
 			}
-			$elm.draggable({ cursor: "move", cancel: ".rszW, .rszH" });	
+			$elm.draggable({ cursor: "move", cancel: ".rszW, .rszH", drag: _options.dragCallback });	
 				
 			$elm.children('.rszW').draggable({ 
 				axis: "x",
