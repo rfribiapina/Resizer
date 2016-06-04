@@ -15,6 +15,9 @@ $('.resizer').resizer(
 			aspectRatioLocked: false, // true | false
 			callback: function(element,width,height){
 				//console.log(element,width,height)
+			},
+			dragCallback: function(event,ui){
+				//console.log(event,ui)
 			}
 		}
 );
