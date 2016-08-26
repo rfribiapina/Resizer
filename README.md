@@ -29,7 +29,7 @@ $('.resizer').resizer(
 	<script src="js/jquery.ui.min.js"></script>
 	<script src="js/jquery.ui.touch_punch.js"></script>
 	<script src="jquery.resizer.js"></script>
-	<link rel="stylesheet" href="jquery.resizer.css" />
+	<link rel="stylesheet" href="css/jquery.resizer.css" />
 </head>
 <body>
 <div class='resizer'></div>
