@@ -1,3 +1,17 @@
-.resizer{ position: absolute; }
-.resizer .rszW{ position: absolute; right:0; top: 0; width:5px; height: 100%; cursor:e-resize; }
-.resizer .rszH{ position: absolute; bottom:0; left: 0; width:100%; height: 5px; cursor:s-resize; }
+.resizer{ position: absolute; background: url(cross.png) no-repeat center center;}
+.resizer .rszT{ position: absolute; left: 0; top:0; margin-top:-7px; width:100%; height:14px; cursor:n-resize; background: url(horizontal.png) repeat-x 0 center; }
+.resizer .rszT::after { content: ""; position: absolute; top: 0; left: 0; width:100%; height:100%; background:url(square.png) no-repeat center center; }
+.resizer .rszT[disabled=true] { cursor:default; }
+.resizer .rszT[disabled=true]::after { content: ""; position: absolute; top: 0; left: 0; width:100%; height:100%; background:none; }
+.resizer .rszB{ position: absolute; left: 0; bottom:0; margin-bottom:-7px; width:100%; height: 14px; cursor:s-resize; background: url(horizontal.png) repeat-x 0 center; }
+.resizer .rszB::after { content: ""; position: absolute; top: 0; left: 0; width:100%; height:100%; background:url(square.png) no-repeat center center; }
+.resizer .rszB[disabled=true] { cursor:default; }
+.resizer .rszB[disabled=true]::after { content: ""; position: absolute; top: 0; left: 0; width:100%; height:100%; background:none; }
+.resizer .rszL{ position: absolute; top: 0; left:0; margin-left:-7px; width:14px; height: 100%; cursor:e-resize; background: url(vertical.png) repeat-y center 0; }
+.resizer .rszL::after { content: ""; position: absolute; top: 0; left: 0; width:100%; height:100%; background:url(square.png) no-repeat center center; }
+.resizer .rszL[disabled=true] { cursor:default; }
+.resizer .rszL[disabled=true]::after { content: ""; position: absolute; top: 0; left: 0; width:100%; height:100%; background:none; }
+.resizer .rszR{ position: absolute; top: 0; right:0; margin-right:-7px; width:14px; height: 100%; cursor:w-resize; background: url(vertical.png) repeat-y center 0; }
+.resizer .rszR::after { content: ""; position: absolute; top: 0; left: 0; width:100%; height:100%; background:url(square.png) no-repeat center center; }
+.resizer .rszR[disabled=true] { cursor:default; }
+.resizer .rszR[disabled=true]::after { content: ""; position: absolute; top: 0; left: 0; width:100%; height:100%; background:none; }
