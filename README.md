@@ -11,10 +11,10 @@ Plugin do jQuery que redimenciona elementos HTML
 ```javascript
 $('.resizer').resizer(
 		{
-			resizeOrientation: 'all', // all | w | h
+			resizeOrientation: 'all', // all | t | b | r | l
 			aspectRatioLocked: false, // true | false
-			callback: function(element,width,height){
-				//console.log(element,width,height)
+			callback: function(element,width,height,top,left){
+				//console.log(element,width,height,top,left)
 			},
 			dragCallback: function(event,ui){
 				//console.log(event,ui)
